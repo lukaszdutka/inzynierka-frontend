@@ -1,9 +1,11 @@
-<div class="node"
+<div class="node noselect"
      [style.background-color]="color"
      [title]="'Reroll: ' + text + ' ' + id"
      (click)="changeThisTag($event)"
      [ngClass]="clickable ? 'clickable' : 'notClickable'"
      [style.border]="borderRadius"
+     [contextMenu]="basicMenu"
+     [contextMenuSubject]="tag"
 >
 
   <span *ngFor="let tagOrText of array">
@@ -12,3 +14,16 @@
   </span>
 
 </div>
+
+<context-menu class="contextMenu">
+  <ng-template contextMenuItem (execute)="this.changeThisTag($event)">
+    Reroll
+  </ng-template>
+  <ng-template contextMenuItem divider="true"></ng-template>
+  <ng-template contextMenuItem (execute)="this.notImplemented()">
+    Change text
+  </ng-template>
+  <!--  <ng-template contextMenuItem passive="true">-->
+  <!--    Input something: <input type="text">-->
+  <!--  </ng-template>-->
+</context-menu>
