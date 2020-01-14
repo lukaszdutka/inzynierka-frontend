@@ -1,0 +1,14 @@
+<div class="node"
+     [style.background-color]="color"
+     [title]="'Reroll: ' + text + ' ' + id"
+     (click)="changeThisTag($event)"
+     [ngClass]="clickable ? 'clickable' : 'notClickable'"
+     [style.border]="borderRadius"
+>
+
+  <span *ngFor="let tagOrText of array">
+    <app-tag *ngIf='isTag(tagOrText)' [tag]="tagOrText"></app-tag>
+    <span *ngIf='isText(tagOrText)'>{{tagOrText}}</span>
+  </span>
+
+</div>

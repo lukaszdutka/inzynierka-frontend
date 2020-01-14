@@ -1,0 +1,28 @@
+.title {
+  font-size: 30px;
+  alignment: center;
+  width: 100%;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.nav {
+  color: #2f2f2f;
+  text-align: right;
+  display: inline-block;
+  list-style-type: none;
+  width: 100%;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+
+.my-mat-toolbar { //fixme: change name
+  height: 48px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  background-color: #ffa000;
+}

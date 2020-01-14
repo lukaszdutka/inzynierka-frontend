@@ -1,0 +1,19 @@
+div {
+  display: block;
+}
+
+.node {
+  display: inline-block;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  border-radius: 7px;
+  margin: 2px;
+  padding: 2px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.notClickable {
+  cursor: default;
+}
