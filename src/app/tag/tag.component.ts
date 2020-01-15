@@ -76,10 +76,6 @@ export class TagComponent implements OnInit {
     }
   }
 
-  showMessage(s: string) {
-    console.log(s);
-  }
-
   notImplemented() {
     this.snackBar.open('This feature is not implemented yet.', null, {
       duration: 2300,
